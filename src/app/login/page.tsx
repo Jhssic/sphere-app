@@ -41,7 +41,7 @@ export default function LoginPage() {
       </div>
 
       {/* Lado direito – Formulário */}
-      <div className="flex w-full items-center justify-center p-8">
+      <div className="flex w-full items-center justify-center lg:w-1/2">
         <form
           onSubmit={handleSubmit}
           className="max-w-md w-full space-y-6 bg-white p-8 rounded-2xl shadow-lg"

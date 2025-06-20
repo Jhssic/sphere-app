@@ -65,12 +65,10 @@ export default function CadastroPage() {
   return (
     <div className="flex h-screen w-full">
       {/* Lado esquerdo */}
-      <div className="relative hidden w-1/2 bg-gradient-to-b from-orange-300 via-orange-400 to-purple-600 lg:block">
+      <div className="relative hidden w-1/2 bg-gradient-to-b from-orange-400 to-purple-600 lg:flex items-center justify-center">
         <div className="absolute left-10 top-10">
           <svg viewBox="0 0 24 24" fill="white" className="h-12 w-12">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" />
-            <path d="M2 17L12 22L22 17" />
-            <path d="M2 12L12 17L22 12" />
+           <path d="M12 2L2 12L12 22L22 12L12 2Z" />
           </svg>
         </div>
         <div className="flex h-full items-center justify-center">
