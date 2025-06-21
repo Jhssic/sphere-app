@@ -2,10 +2,6 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-export function InputDemo() {
-  return <Input type="email" placeholder="Email" />
-}
-
 function Input({ className, type, ...props }: React.ComponentProps<"input">) {
   return (
     <input
@@ -21,6 +17,5 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
     />
   )
 }
-
 
 export { Input }
