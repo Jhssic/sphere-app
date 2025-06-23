@@ -71,14 +71,6 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
 
 :root {
   --sidebar: hsl(0 0% 98%);
@@ -114,10 +106,9 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
-    @apply bg-background text-foreground;
+    background-color: #ffffff;
+    color: #000000;
   }
 }
+
