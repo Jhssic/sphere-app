@@ -1,6 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import Login from './page';
 
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({ push: jest.fn() }),
+}));
+
 describe('Login', () => {
   test('renderiza o título da página de login', () => {
     render(<Login />);
@@ -9,12 +13,12 @@ describe('Login', () => {
 
   test('renderiza campo de e-mail', () => {
     render(<Login />);
-    expect(screen.getByPlaceholderText(/e-mail/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
   });
 
   test('renderiza campo de senha', () => {
     render(<Login />);
-    expect(screen.getByPlaceholderText(/senha/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/senha/i)).toBeInTheDocument();
   });
 
   test('botão de login está presente', () => {
