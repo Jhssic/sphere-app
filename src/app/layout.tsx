@@ -28,9 +28,7 @@ export default function RootLayout({
           <SidebarProvider>
             <div className="flex min-h-screen bg-gray-50">
               <SidebarNav />
-              <SidebarInset>
-                <main className="flex-1 overflow-auto">{children}</main>
-              </SidebarInset>
+              <SidebarInset className="flex-1 overflow-auto">{children}</SidebarInset>
             </div>
           </SidebarProvider>
         )}
