@@ -1,6 +1,4 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { redirect } from "next/navigation"
 
 export default function LoginPage() {
   return (
@@ -72,4 +70,8 @@ export default function LoginPage() {
       </div>
     </div>
   )
+}
+export default function Home() {
+  redirect("/login")
+  return null
 }
