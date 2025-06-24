@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { SidebarNav } from "@/components/ui/sidebar-nav"
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
+import SidebarWrapper from "@/components/ui/SidebarWrapper"
 
 export const metadata: Metadata = {
   title: "VitaBox - Sistema de Nutrição",
@@ -25,6 +26,11 @@ export default function RootLayout({
             </SidebarInset>
           </div>
         </SidebarProvider>
+
+        <div className="flex min-h-screen bg-gray-50">
+          <SidebarWrapper />
+          <main className="flex-1 overflow-auto">{children}</main>
+        </div>
       </body>
     </html>
   )
