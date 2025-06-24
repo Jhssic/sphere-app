@@ -1,10 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
-import SidebarWrapper from "@/components/ui/SidebarWrapper"
-
-const inter = Inter({ subsets: ["latin"] })
+import { SidebarNav } from "@/components/ui/sidebar-nav"
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 
 export const metadata: Metadata = {
   title: "VitaBox - Sistema de Nutrição",
@@ -18,11 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
-        <div className="flex min-h-screen bg-gray-50">
-          <SidebarWrapper />
-          <main className="flex-1 overflow-auto">{children}</main>
-        </div>
+      <body className="font-sans">
+        <SidebarProvider>
+          <div className="flex min-h-screen bg-gray-50">
+            <SidebarNav />
+            <SidebarInset>
+              <main className="flex-1 overflow-auto">{children}</main>
+            </SidebarInset>
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   )
