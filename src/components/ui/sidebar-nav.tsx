@@ -55,6 +55,11 @@ const navItems = [
 export function SidebarNav() {
   const pathname = usePathname()
 
+  const hideSidebarOn = ["/", "/login", "/register", "/cadastro"]
+  if (hideSidebarOn.includes(pathname)) {
+    return null
+  }
+
   return (
     <Sidebar variant="sidebar" collapsible="icon">
       <SidebarHeader className="border-b border-sidebar-border">
