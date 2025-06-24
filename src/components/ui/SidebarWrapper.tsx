@@ -22,7 +22,7 @@ export default function SidebarWrapper() {
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   // Rotas em que NÃO queremos mostrar a sidebar
-  const hideSidebarOn = ["/", "/login", "/register", "/cadastro"]
+  const hideSidebarOn = ["/", "/login", "/register"]
 
   // Se a rota atual for uma das rotas de login/register, não renderiza nada
   if (hideSidebarOn.includes(pathname)) {
