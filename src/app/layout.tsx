@@ -22,14 +22,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="font-sans">
-
-        <SidebarProvider>
-          <div className="flex min-h-screen bg-gray-50">
-            <SidebarNav />
-            <SidebarInset className="flex-1 overflow-auto">{children}</SidebarInset>
-          </div>
-        </SidebarProvider>
-
         {hideSidebar ? (
           <div className="min-h-screen bg-gray-50">{children}</div>
         ) : (

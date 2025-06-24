@@ -49,8 +49,11 @@ export default function LoginPage() {
           <h2 className="text-2xl font-semibold text-center">Login Nutricionista</h2>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium">
+              Email
+            </label>
             <Input
+              id="email"
               type="email"
               placeholder="seu@exemplo.com"
               value={email}
@@ -60,8 +63,11 @@ export default function LoginPage() {
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-medium">Senha</label>
+            <label htmlFor="password" className="block text-sm font-medium">
+              Senha
+            </label>
             <Input
+              id="password"
               type="password"
               placeholder="••••••••"
               value={password}
