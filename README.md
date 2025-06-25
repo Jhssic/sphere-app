@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# Sphere
+
+**Sistema de Gestão para Nutricionistas**
 
 ## Getting Started
 
@@ -13,24 +16,25 @@ pnpm dev
 # or
 bun dev
 ```
+## **Visão Geral do Projeto**
+O Sistema de Gestão para Nutricionistas é uma plataforma que será desenvolvida para otimizar o acompanhamento de pacientes, organização de planos alimentares, agendamento de consultas, monitoramento de evolução, controle financeiro e feedbakcs dos pacientes. Esse sistema visa proporcionar mais eficiência no dia a dia dos profissionais de nutrição, centralizando informações e melhorando a comunicação com seus pacientes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Domínio do Problema**
+Atualmente, nutricionistas enfrentam um desafio principal:
+- Falta de uma ferramenta que contenha todas as funcionalidades necessárias em um só sistema.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O sistema proposto soluciona esse problema ao integrar funcionalidades essenciais, como cadastro de pacientes, prescrição de dietas personalizadas, agendamento de consultas, envio de mensagens e geração de relatórios.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Principais Tecnologias Utilizadas**
+### **Frontend**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+  
+### **Backend**
+- **NestJS**
+- **Prisma**
+- **JWT (JSON Web Token)**
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **Banco de Dados**
+- **PostgreSQL**
