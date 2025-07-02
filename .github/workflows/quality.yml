@@ -1,0 +1,36 @@
+name: Quality Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar testes unitários com Jest
+        run: npm test -- --coverage
+
+      - name: Executar Autocannon (simulação de carga)
+        run: |
+          npx autocannon -c 20 -d 10 http://localhost:3000/api/login || true
+
+      - name: Instalar OWASP ZAP CLI
+        run: sudo snap install zaproxy
+
+      - name: Rodar scan com ZAP (exemplo básico)
+        run: zaproxy -daemon -port 8090 -host 127.0.0.1
